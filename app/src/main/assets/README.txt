@@ -1,0 +1,1 @@
+Place Teachable Machine files here: model.tflite and labels.txt

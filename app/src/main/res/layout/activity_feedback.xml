@@ -1,0 +1,168 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/logo"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AI Assist"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="#1B2A41"/>
+            </LinearLayout>
+
+            <!-- HOW TO USE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_card"
+                android:padding="18dp"
+                android:layout_marginTop="18dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="How to Use"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#1B2A41"/>
+
+                    <TextView
+                        android:text="Capture fruits and vegetables using the camera.\nNutrition data comes from API.\nAI gives smart feedback."
+                        android:textSize="16sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:maxLines="5"
+                        android:textColor="#5A6B7B"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- AI FEEDBACK -->
+            <TextView
+                android:id="@+id/summaryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="#4A4A4A"
+                android:layout_marginTop="18dp"/>
+
+            <Button
+                android:id="@+id/dailyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="DAILY FEEDBACK"
+                android:layout_marginTop="12dp"/>
+
+            <Button
+                android:id="@+id/weeklyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="WEEKLY FEEDBACK"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:text="Settings"
+                android:textSize="26sp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:textStyle="bold"
+                android:textColor="#1B2A41"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:id="@+id/openSettingsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="OPEN SETTINGS"
+                android:layout_marginTop="10dp"/>
+
+
+            <LinearLayout
+                android:id="@+id/settingsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:background="@drawable/white_card"
+                android:padding="16dp"
+                android:layout_marginTop="10dp">
+
+                <Spinner
+                    android:id="@+id/diet"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+                <EditText
+                    android:id="@+id/calories"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Daily Calories"
+                    android:textSize="16sp"
+                    android:inputType="number"
+                    android:layout_marginTop="10dp"/>
+
+                <Switch
+                    android:id="@+id/weekly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enable Weekly Summary"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"/>
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="SAVE SETTINGS"
+                    android:layout_marginTop="10dp"/>
+
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="LOGOUT"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/bottom_nav"/>
+
+</LinearLayout>
